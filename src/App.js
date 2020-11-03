@@ -50,6 +50,17 @@ function App() {
           setData(res);
         }
       });
+      
+      if(!localStorage.getItem('isPolish')){
+        localStorage.setItem("isPolish", false)
+      }
+
+      if(localStorage.getItem('isPolish') === "false"){
+        setIsPolish(false)
+      }else{
+        setIsPolish(true)
+      }
+
   }, [city, FetchURL]);
 
   return (
@@ -114,8 +125,15 @@ function App() {
           id="switch"
           checked={isPolish}
           onChange={() => {
+            let previousIsPolish
             setIsPolish((prev) => !prev);
-            setLang((prev) => (prev === "eng" ? "pl" : "eng"));
+            setLang((prev) => (prev === "eng" ? "pl" : "eng"))
+            if(localStorage.getItem('isPolish') === "false"){
+               previousIsPolish = 'true'
+            }else{
+               previousIsPolish = 'false'
+            }
+            localStorage.setItem('isPolish', previousIsPolish)
           }}
         />
         PL
