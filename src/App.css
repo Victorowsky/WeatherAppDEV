@@ -46,6 +46,9 @@ input {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  align-content: center;
+  font-weight: 600;
+  text-shadow: 1px 1px 5px black;
 }
 .languageSwitch {
   position: fixed;
@@ -78,10 +81,9 @@ input {
   border-color: white !important;
 }
 
-svg,
-img {
-  width: 74px;
-  max-height: 80px;
+.weatherIcon {
+  width: 100px;
+  height: 100px;
 }
 
 @media (max-width: 400px) {
@@ -93,5 +95,8 @@ img {
     flex: 1;
     margin-left: auto;
     margin-right: auto;
+  }
+  .localeTime {
+    font-size: 19px;
   }
 }
