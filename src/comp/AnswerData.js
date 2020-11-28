@@ -44,12 +44,18 @@ const AnswerData = ({ data, imgLink, isPolish, setBookMarkedCities,  hours, book
    
     
   };
-
-
-  const BookmarkBorderIconStyle = {
-    alignSelf: "flex-end",
+  let BookmarkBorderIconStyle
+  if(window.innerWidth < 400){
+       BookmarkBorderIconStyle = {
+    alignSelf: "center",
     transition : '0.3s'
   }
+  }else{
+     BookmarkBorderIconStyle = {
+      alignSelf: "flex-end",
+      transition : '0.3s'
+  }}
+
   
   const BookmarkButton = useRef()
 
