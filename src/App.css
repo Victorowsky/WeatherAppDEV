@@ -107,7 +107,6 @@ input {
 }
 .bookMark {
   align-self: flex-end;
-  transition: ;
 }
 .bookMark:hover {
   transform: scale(1.1);
