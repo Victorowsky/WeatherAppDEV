@@ -40,6 +40,8 @@ input {
 }
 .temperature {
   align-self: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .localeTime {
@@ -99,4 +101,31 @@ input {
   .localeTime {
     font-size: 19px;
   }
+}
+.marked {
+  color: #e9c46a;
+}
+.bookMark {
+  align-self: flex-end;
+  transition: ;
+}
+.bookMark:hover {
+  transform: scale(1.1);
+}
+.bookmarksSection {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+}
+.bookmarkSelf {
+  margin-right: 5px;
+  border: 1px solid black;
+  border-radius: 6px;
+  width: fit-content;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.bookmarkSelf:hover {
+  transform: scale(1.05);
 }
